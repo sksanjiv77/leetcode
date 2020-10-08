@@ -21,4 +21,18 @@ class Solution:
         else:
             return False
         
+
+# Alternate solution 
+
+def backspaceCompare(self, S: str, T: str) -> bool:
+        return self.build(S) == self.build(T)
         
+    def build(self, source):
+        stack = []
+        for char in source:
+            if char != "#":
+                stack.append(char)
+            else:
+                stack = stack[:-1]
+        return "".join(stack)
+    
