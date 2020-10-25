@@ -14,3 +14,4 @@ class Solution:
         reversedP = p[::-1]
         return p == reversedP
         
+
